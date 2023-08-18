@@ -20,7 +20,7 @@ while (true)
             BinarySearcher();
             break;
         case 3:
-            Console.WriteLine("Not Complete");
+            Console.WriteLine("Not Complete.");
             break;
         case 4:
             LinearSearcher();
