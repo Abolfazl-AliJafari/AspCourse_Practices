@@ -9,7 +9,6 @@ IOrderDbAction orderDbAction = new OrderDbAction_Ef();
 var result = orderDbAction.OrderChangeStatus(order.OrderCode,"Done");
 if(result.Success)
 {
-    ISms sms = new KavehNegar();
-    SendSms sendSms = new SendSms(sms);
+    SendSms sendSms = new SendSms(new KavehNegar());
     sendSms.Send("Status Changed",user.Mobile);
 }
