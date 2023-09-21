@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Builder
 {
-    public class RequestBuilderWithForm : RequestBuilder, IRequestBuilderWithForm
+    public class RequestBuilderWithForm :  IRequestBuilderWithForm
     {
         readonly Request _request;
         public RequestBuilderWithForm(Request request1)
@@ -24,7 +24,7 @@ namespace Builder
             _request.QueryString[key] = value;
             return this;
         }
-        public IRequestBuilderWithForm WithForm(object form)
+        public new IRequestBuilderWithForm WithForm(object form)
         {
             _request.Form = form;
             return this;

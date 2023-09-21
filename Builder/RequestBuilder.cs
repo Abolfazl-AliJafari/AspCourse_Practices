@@ -35,14 +35,16 @@ namespace Builder
             _request.QueryString[key] = value;
             return this;
         }
-        public IRequestBuilderWithBody AddBody()
+        public IRequestBuilderWithBody WithBody(object body)
         {
+            _request.Body = body;
             IRequestBuilderWithBody requestBuilderWithBody = new RequestBuilderWithBody(_request);
             return requestBuilderWithBody;
         }
 
-        public IRequestBuilderWithForm AddForm()
+        public IRequestBuilderWithForm WithForm(object form)
         {
+            _request.Form = form;
             IRequestBuilderWithForm requestBuilderWithForm = new RequestBuilderWithForm(_request);
             return requestBuilderWithForm;
         }
