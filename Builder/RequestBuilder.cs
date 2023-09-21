@@ -9,7 +9,7 @@ namespace Builder
 
     public class RequestBuilder
     {
-        readonly Request _request = new Request("");
+        readonly Request _request = new Request();
 
         public RequestBuilder()
         {

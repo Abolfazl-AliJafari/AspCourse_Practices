@@ -8,10 +8,6 @@ namespace Builder
 {
     public class Request
     {
-        public Request(string url)
-        {
-            Url= url;
-        }
         public string Url { get; set; }
         public object? Body { get; set; }
         public object? Form { get; set; }
